@@ -1,0 +1,34 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.input {
+  min-height: 42px;
+  max-height: 140px;
+  padding: 10px 16px;
+  field-sizing: content;
+  resize: none;
+  border-radius: 21px;
+}
+
+.send {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #fff;
+  background: var(--accent-gradient);
+  border: 0;
+  border-radius: 50%;
+}
+
+.send:disabled {
+  opacity: 0.4;
+}

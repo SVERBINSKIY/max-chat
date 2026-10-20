@@ -1,0 +1,17 @@
+.layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  height: 100dvh;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* на телефоне список и чат открываются по очереди */
+  .layout[data-chat-open='true'] > :first-child,
+  .layout[data-chat-open='false'] > :last-child {
+    display: none;
+  }
+}
